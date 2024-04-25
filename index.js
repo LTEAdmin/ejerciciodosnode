@@ -14,6 +14,10 @@ app.use('/tiempo', (req, res, next) => {
     : res.status(401).send('No autorizado');    
     
 });
+// creando ruta de tiempo para que pueda continuar la carga si esta autorizado
+app.get('/tiempo', (req, res) => {
+    res.send('usuario autorizado a entrar a ruta de tiempo');
+})
 
 app.get("/", (req, res) => {
     res.send("Hello World!");       
