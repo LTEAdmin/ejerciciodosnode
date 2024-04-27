@@ -1,6 +1,6 @@
 import express from "express";
-import validar from "./middleware/middleware.js";
-const rutas = express.Router
+import validar from "../middleware/middleware.js";
+const rutas = express.Router();
 
 // creando ruta de tiempo para que pueda continuar la carga si esta autorizado
 rutas.get("/tiempo", validar, (req, res) => {
